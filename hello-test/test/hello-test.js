@@ -1,0 +1,53 @@
+'use strict';
+
+const assert = require('assert');
+
+const hello = require('../hello');
+
+var sum = hello.sum;
+var fib = hello.fib;
+
+describe('#hello.js', () => {
+    describe('#sum()', ()=>{
+
+        before(function() {
+            console.log('before...');
+        });
+
+        after(function(){
+            console.log('after...');
+        });
+
+        beforeEach(function() {
+            console.log('beforeEach ...');
+        });
+
+        afterEach(function() {
+            console.log('afterEach ...');
+        });
+
+
+        it('sum() should return 0', () => {
+            assert.strictEqual(sum(), 0);
+        });
+
+        it('sum(1) should return 1', () => {
+            assert.strictEqual(sum(1), 1);
+        });
+
+        it('sum(1,2) should return 3', () => {
+            assert.strictEqual(sum(1,2), 3);
+        });
+
+        it('sum(1, 2, 3) should return 6', () => {
+            assert.strictEqual(sum(1, 2, 3), 6);
+        });
+    });
+
+    describe('#fib()', ()=> {
+        describe('fib(1) should return 1', () => {
+            assert.strictEqual(fib(1), 1);
+        });
+    });
+
+});

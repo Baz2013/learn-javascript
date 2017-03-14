@@ -1,0 +1,24 @@
+{
+    "name": "hello-koa2",
+    "version": "1.0.0",
+    "description": "Hello Koa 2 example with async",
+    "main": "start.js",
+    "scripts": {
+        "start": "node start.js"
+    },
+    "keywords": [
+        "koa",
+        "async"
+    ],
+    "author": "Michael Liao",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Baz2013/learn-javascript.git"
+    },
+    "dependencies": {
+        "koa": "2.0.0",
+        "mime": "1.3.4",
+        "mz": "2.4.0"
+    }
+}
